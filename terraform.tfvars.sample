@@ -1,0 +1,21 @@
+# Random generated secret. Drone CLI needs this to access the Drone server.
+# Recommend to use http://correcthorsebatterystaple.net/ to generate this secret.
+drone_secret=
+
+# DO token to interact with DO API.
+# Get it from https://cloud.digitalocean.com/settings/api/tokens
+do_token=
+
+# DO Droplet
+droplet_name=drone-ci-server
+droplet_region=sgp1
+droplet_size=500mb
+
+# For SSH access to DO droplet. Both are path to the local SSH directory. e.g. ~/.ssh/id_rsa
+private_key=~/.ssh/id_rsa
+public_key=~/.ssh/id_rsa.pub
+
+# OAuth2 Client ID & Client Secret for SCM integration.
+# Github: Register a new application at https://github.com/settings/developers
+client_id=
+client_secret=
