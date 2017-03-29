@@ -10,6 +10,8 @@ variable "public_key" { }
 variable "client_id" { }
 variable "client_secret" { }
 
+variable "drone_secret" { }
+
 provider  "digitalocean" {
   token = "${var.do_token}"
 }
@@ -20,6 +22,7 @@ resource "template_file" "setup_drone" {
   vars {
     client_id = "${var.client_id}"
     client_secret = "${var.client_secret}"
+    drone_secret = "${var.drone_secret}"
   }
 }
 
