@@ -16,7 +16,7 @@ provider  "digitalocean" {
   token = "${var.do_token}"
 }
 
-resource "template_file" "setup_drone" {
+data "template_file" "setup_drone" {
   template = "${file("${path.module}/setup_drone.sh.tpl")}"
 
   vars {
@@ -47,7 +47,7 @@ resource "digitalocean_droplet" "drone-ci-server" {
 
   provisioner "remote-exec" {
     inline = [
-      "${template_file.setup_drone.rendered}"
+      "${data.template_file.setup_drone.rendered}"
     ]
   }
 }
