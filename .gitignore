@@ -1,3 +1,6 @@
 *.tfvars
 *.tfstate
 *.backup
+.env
+.vagrant
+*.log
