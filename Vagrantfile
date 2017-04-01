@@ -45,7 +45,6 @@ EOL
 
   config.vm.provision "docker" do |d|
     d.run "drone/drone:0.5",
-      name: "drone",
       args:
         "-e DRONE_GITHUB=true \
          -e DRONE_OPEN=true \
