@@ -52,7 +52,6 @@ EOL
          -e DRONE_GITHUB_CLIENT=#{ENV['DRONE_GITHUB_CLIENT']} \
          -e DRONE_GITHUB_SECRET=#{ENV['DRONE_GITHUB_SECRET']} \
          -e DRONE_SECRET=#{ENV['DRONE_SECRET']} \
-         -e DRONE_ADMIN=tkbky \
          -e DRONE_DEBUG=true \
          -e DRONE_BROKER_DEBUG=true \
          -v drone:/var/lib/drone \
